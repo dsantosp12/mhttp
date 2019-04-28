@@ -7,9 +7,18 @@
 #include "mobject.h"
 #include "murl.h"
 #include "mheaders.h"
+#include "mserializer.h"
 
 namespace mhttp {
-  struct  MRequest {
+  struct  MRequest : private MSerializable {
+      MRequest()
+        : _method(UNKNOWN),
+          _uri(""),
+          _version(""),
+          _headers(),
+          _body("")
+      {}
+
       MMethod _method;
 
       MUri _uri;
@@ -21,12 +30,12 @@ namespace mhttp {
       std::string _body;
 
       // TODO: Handle other methods
-      void setMethod(const std::string& method) {
-        if (method == "GET") { _method = GET; }
-        else if (method == "POST") { _method = POST; }
-        else if (method == "PUT") { _method = PUT; }
-        else if (method == "DELETE") { _method = DELETE; }
-      }
+      void setMethod(const std::string& method);
+
+      // MSerializer Interface
+      virtual void deserialize(json *out) const override;
+
+      virtual void serialize(const json &data) override;
   };
 }
 
