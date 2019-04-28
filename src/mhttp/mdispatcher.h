@@ -18,7 +18,7 @@ namespace mhttp
 
       ~MDispatcher() = default;
 
-      void dispatch(MBuffer& buff, std::size_t length, const MDispatcherDoneCB& cb);
+      MResponse dispatch(MBuffer& buff);
 
     private:
      MParser _parser;

@@ -14,9 +14,7 @@ namespace mhttp {
       // Static helper method
       static MBuffers badRequest();
 
-    private:
       MMethod _method;
-
   };
 }
 

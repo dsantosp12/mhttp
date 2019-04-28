@@ -4,13 +4,15 @@
 namespace mhttp {
   MDispatcher::MDispatcher() { }
 
-  void MDispatcher::dispatch(MBuffer& buff, std::size_t length, const MDispatcherDoneCB& cb) {
-    _parser.parse(buff, length, [&cb](auto request) {
-      if (request) {
+  MResponse MDispatcher::dispatch(MBuffer& buff) {
+    MRequest req;
+    std::string raw(buff.data());
+    _parser.parse(raw, &req);
 
-      }
-      MResponse resp;
-      cb(resp);
-    });
+    // TODO: Implement dispatcher
+    MResponse resp;
+    resp._method = GET;
+
+    return resp;
   }
 } // mhttp

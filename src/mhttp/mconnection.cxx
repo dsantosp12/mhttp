@@ -34,11 +34,11 @@ namespace mhttp {
 
   void MConnection::handleRead(const MError& ec, std::size_t length) {
     if (!ec) {
-      _dispatcher.dispatch(_buffer, length, [this](auto resp) {
-        boost::asio::async_write(_socket, resp.buffers(),
-          boost::bind(&MConnection::handleWrite, shared_from_this(),
-            boost::asio::placeholders::error));
-      });
+      auto resp = _dispatcher.dispatch(_buffer);
+
+      boost::asio::async_write(_socket, resp.buffers(),
+        boost::bind(&MConnection::handleWrite, shared_from_this(),
+          boost::asio::placeholders::error));
     } else {
       _connManager.stop(shared_from_this());
     }
