@@ -42,7 +42,69 @@
     "__bit_reference": "cpp",
     "__string": "cpp",
     "forward_list": "cpp",
-    "__locale": "cpp"
+    "__locale": "cpp",
+    "__debug": "cpp",
+    "__errc": "cpp",
+    "__mutex_base": "cpp",
+    "__node_handle": "cpp",
+    "__threading_support": "cpp",
+    "__tuple": "cpp",
+    "atomic": "cpp",
+    "bitset": "cpp",
+    "cctype": "cpp",
+    "chrono": "cpp",
+    "clocale": "cpp",
+    "cmath": "cpp",
+    "codecvt": "cpp",
+    "complex": "cpp",
+    "condition_variable": "cpp",
+    "csignal": "cpp",
+    "cstdarg": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "cstring": "cpp",
+    "ctime": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "iomanip": "cpp",
+    "ios": "cpp",
+    "iostream": "cpp",
+    "limits": "cpp",
+    "mutex": "cpp",
+    "numeric": "cpp",
+    "ostream": "cpp",
+    "ratio": "cpp",
+    "sstream": "cpp",
+    "system_error": "cpp",
+    "typeindex": "cpp",
+    "valarray": "cpp"
   },
-  "C_Cpp.intelliSenseEngineFallback": "Disabled"
+  "C_Cpp.intelliSenseEngineFallback": "Disabled",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "googletest.failed",
+        "settings": {
+          "foreground": "#f00"
+        }
+      },
+      {
+        "scope": "googletest.passed",
+        "settings": {
+          "foreground": "#0f0"
+        }
+      },
+      {
+        "scope": "googletest.run",
+        "settings": {
+          "foreground": "#0f0"
+        }
+      }
+    ]
+  },
+  "gtest-adapter.debugConfig": [
+    "(lldb) Launch"
+  ],
+  "gtest-adapter.supportLocation": true
 }
