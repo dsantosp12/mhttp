@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.11.4)
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 include_directories(mhttp)
-file(GLOB SOURCE_FILES *.cxx mhttp/*.c  mhttp/*.h mhttp/*.cxx mhttp/*.h)
+include_directories(mhttp/json)
+
+file(GLOB SOURCE_FILES *.cxx mhttp/*.c  mhttp/*.h mhttp/*.cxx mhttp/*.h json/*.h)
 
 find_package(Boost COMPONENTS REQUIRED system thread regex)
 include_directories(${Boost_INCLUDE_DIRS})
