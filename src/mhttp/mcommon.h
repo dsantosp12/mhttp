@@ -26,8 +26,15 @@ namespace mhttp {
     GET,
     POST,
     PUT,
-    DELETE
+    DELETE,
+
+    METHOD_COUNT,
+    UNKNOWN,
   };
+
+  std::string MmethodToStr(MMethod m);
+
+  MMethod MstrToMethod(const std::string& s);
 }
 
 #endif
