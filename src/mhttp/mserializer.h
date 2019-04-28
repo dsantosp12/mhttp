@@ -2,7 +2,7 @@
 #define MHTTP_SERIALIZER
 
 #include "mcommon.h"
-#include "../json/json.h"
+#include "../json/json.hpp"
 
 namespace mhttp
 {

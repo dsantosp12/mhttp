@@ -1,7 +1,7 @@
 #include <iostream>
 #include "gtest/gtest.h"
 #include "mrequest.h"
-#include "../src/json/json.h"
+#include "../src/json/json.hpp"
 
 using namespace mhttp;
 

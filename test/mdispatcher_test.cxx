@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "mdispatcher.h"
-#include "../src/json/json.h"
+#include "../src/json/json.hpp"
 
 using namespace mhttp;
 
