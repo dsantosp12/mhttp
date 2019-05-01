@@ -1,6 +1,6 @@
-#include "mcommon.h"
+#include "common.h"
 
-namespace mhttp
+namespace jtp
 {
 
 std::string MmethodToStr(MMethod m)
@@ -32,4 +32,4 @@ MMethod MstrToMethod(const std::string& s)
     return method;
 }
 
-} // namespace mhttp
+} // namespace jtp

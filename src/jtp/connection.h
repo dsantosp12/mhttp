@@ -1,5 +1,5 @@
-#ifndef MHTTP_MCONNECTION_H
-#define MHTTP_MCONNECTION_H
+#ifndef JTP_MCONNECTION_H
+#define JTP_MCONNECTION_H
 
 #include <thread>
 #include <array>
@@ -10,10 +10,10 @@
 #include <boost/enable_shared_from_this.hpp>
 #include <boost/array.hpp>
 
-#include "mcommon.h"
-#include "mdispatcher.h"
+#include "common.h"
+#include "dispatcher.h"
 
-namespace mhttp {
+namespace jtp {
   class MConnectionManager;
 
   class MConnection 
@@ -44,6 +44,6 @@ namespace mhttp {
   };
 
   using MConnectionPtr = boost::shared_ptr<MConnection>;
-}
+} // namespace jtp
 
 #endif

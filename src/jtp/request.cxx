@@ -1,10 +1,10 @@
-#include "mrequest.h"
-#include "mparser.h"
-#include "mcommon.h"
+#include "request.h"
+#include "parser.h"
+#include "common.h"
 
 #include <iostream>
 
-namespace mhttp {
+namespace jtp {
           // TODO: Handle other methods
     void MRequest::setMethod(const std::string& method) {
         _method = MstrToMethod(method);
@@ -42,4 +42,4 @@ namespace mhttp {
 
         _body = data["body"];
     }
-}
+} // namespace jtp

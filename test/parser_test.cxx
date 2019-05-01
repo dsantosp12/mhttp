@@ -3,11 +3,11 @@
 #include <algorithm>
 #include <gtest/gtest.h>
 
-#include "mparser.h"
-#include "mcommon.h"
-#include "mrequest.h"
+#include "parser.h"
+#include "common.h"
+#include "request.h"
 
-using namespace mhttp;
+using namespace jtp;
 
 class MParserTest : public testing::Test
 {

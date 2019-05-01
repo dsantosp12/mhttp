@@ -1,14 +1,14 @@
-#ifndef MHTTP_MDISPATCHER_H
-#define MHTTP_MDISPATCHER_H
+#ifndef JTP_MDISPATCHER_H
+#define JTP_MDISPATCHER_H
 
 #include <optional>
 #include <boost/noncopyable.hpp>
 
-#include "mcommon.h"
-#include "mresponse.h"
-#include "mparser.h"
+#include "common.h"
+#include "response.h"
+#include "parser.h"
 
-namespace mhttp
+namespace jtp
 {
   class MDispatcher : private boost::noncopyable {
     using MDispatcherDoneCB = std::function<void(const MResponse&)>;
@@ -24,6 +24,6 @@ namespace mhttp
      MParser _parser;
 
   };
-} // mhttp
+} // namespace jtp
 
 #endif

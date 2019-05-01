@@ -1,15 +1,15 @@
-#ifndef MHTTP_MPARSER_H
-#define MHTTP_MPARSER_H
+#ifndef JTP_MPARSER_H
+#define JTP_MPARSER_H
 
 #include <optional>
 #include <functional>
 #include <boost/noncopyable.hpp>
 
-#include "mcommon.h"
-#include "mresponse.h"
-#include "mrequest.h"
+#include "common.h"
+#include "response.h"
+#include "request.h"
 
-namespace mhttp {
+namespace jtp {
   class MParser : boost::noncopyable {
     public:
       MParser();
@@ -21,6 +21,6 @@ namespace mhttp {
     private:
       json _buffer;
   };
-} // mhttp
+} // namespace jtp
 
 #endif

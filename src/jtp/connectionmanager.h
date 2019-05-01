@@ -1,13 +1,13 @@
-#ifndef MHTTP_MCONNECTIONMANAGER_H
-#define  MHTTP_MCONNECTIONMANAGER_H
+#ifndef JTP_MCONNECTIONMANAGER_H
+#define JTP_MCONNECTIONMANAGER_H
 
 #include <set>
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
 
-#include "mconnection.h"
+#include "connection.h"
 
-namespace mhttp {
+namespace jtp {
   class MConnectionManager : private boost::noncopyable {
     public:
       void start(MConnectionPtr conn);
@@ -19,6 +19,6 @@ namespace mhttp {
     private:
       std::set<MConnectionPtr> _connections;
   };
-} // mhttp
+} // namespace jtp
 
 #endif

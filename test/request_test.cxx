@@ -1,9 +1,9 @@
 #include <iostream>
 #include "gtest/gtest.h"
-#include "mrequest.h"
+#include "request.h"
 #include "../src/json/json.hpp"
 
-using namespace mhttp;
+using namespace jtp;
 
 TEST(MRequest_Test, DeserializeRequest)
 {

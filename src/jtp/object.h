@@ -1,10 +1,10 @@
-#ifndef MHTTP_MOBJECT_H
-#define MHTTP_MOBJECT_H
+#ifndef JTP_MOBJECT_H
+#define JTP_MOBJECT_H
 
 #include <ostream>
-#include "mcommon.h"
+#include "common.h"
 
-namespace mhttp {
+namespace jtp {
   class MObject {
     public:
       MObject() {}
@@ -13,6 +13,6 @@ namespace mhttp {
 
       friend std::ostream& operator<<(std::ostream& s, const MObject& headers);
   };
-}
+} // namespace jtp
 
 #endif

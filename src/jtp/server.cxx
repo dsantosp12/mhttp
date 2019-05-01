@@ -1,8 +1,8 @@
 #include <boost/bind.hpp>
 
-#include "mserver.h"
+#include "server.h"
 
-namespace mhttp {
+namespace jtp {
   MServer::MServer(const std::string& address, const std::string& port)
     : _service(),
       _signals(_service),
@@ -34,7 +34,7 @@ namespace mhttp {
   void MServer::initAccept() {
     _newConnection.reset(new MConnection(_service, _connManager, _dispatcher));
     _acceptor.async_accept(_newConnection->socket(),
-      boost::bind(&MServer::handleAccept, this, 
+      boost::bind(&MServer::handleAccept, this,
         boost::asio::placeholders::error));
   }
 
@@ -54,4 +54,4 @@ namespace mhttp {
     _acceptor.close();
     _connManager.stopAll();
   }
-} // mhttp
+} // namespace jtp

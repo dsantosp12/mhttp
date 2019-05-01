@@ -1,8 +1,8 @@
 #include <boost/asio.hpp>
 
-#include "mresponse.h"
+#include "response.h"
 
-namespace mhttp {
+namespace jtp {
   MResponse::MResponse() {
   }
 
@@ -23,5 +23,5 @@ namespace mhttp {
 
     return buffers;
   }
-}
+} // namespace jtp
 

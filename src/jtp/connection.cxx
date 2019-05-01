@@ -4,12 +4,12 @@
 #include <boost/bind.hpp>
 #include <signal.h>
 
-#include "mconnection.h"
-#include "mrequest.h"
-#include "mresponse.h"
-#include "mconnectionmanager.h"
+#include "connection.h"
+#include "request.h"
+#include "response.h"
+#include "connectionmanager.h"
 
-namespace mhttp {
+namespace jtp {
   MConnection::MConnection(MIOService& service, MConnectionManager& manager,
                            MDispatcher& dispatcher)
     : _socket(service),
@@ -54,4 +54,4 @@ namespace mhttp {
       _connManager.stop(shared_from_this());
     }
   }
-} // mhttp
+} // namespace jtp

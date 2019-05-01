@@ -1,10 +1,10 @@
-#ifndef MHTTP_MRESPONSE_H
-#define MHTTP_MRESPONSE_H
+#ifndef JTP_MRESPONSE_H
+#define JTP_MRESPONSE_H
 
-#include "mcommon.h"
-#include "mobject.h"
+#include "common.h"
+#include "object.h"
 
-namespace mhttp {
+namespace jtp {
   class MResponse : public MObject {
     public: 
       MResponse();
@@ -16,6 +16,6 @@ namespace mhttp {
 
       MMethod _method;
   };
-}
+} // namespace jtp
 
 #endif

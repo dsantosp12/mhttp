@@ -1,10 +1,10 @@
-#ifndef MHTTP_SERIALIZER
-#define MHTTP_SERIALIZER
+#ifndef JTP_SERIALIZER
+#define JTP_SERIALIZER
 
-#include "mcommon.h"
+#include "common.h"
 #include "../json/json.hpp"
 
-namespace mhttp
+namespace jtp
 {
 
 using namespace nlohmann;
@@ -20,6 +20,6 @@ public:
     virtual void serialize(const json &data) = 0;
 };
 
-} // namespace http
+} // namespace jtp
 
 #endif

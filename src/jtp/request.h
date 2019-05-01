@@ -1,15 +1,15 @@
-#ifndef MHTTP_MREQUEST_H
-#define MHTTP_MREQUEST_H
+#ifndef JTP_MREQUEST_H
+#define JTP_MREQUEST_H
 
 #include <string>
 
-#include "mcommon.h"
-#include "mobject.h"
-#include "murl.h"
-#include "mheaders.h"
-#include "mserializer.h"
+#include "common.h"
+#include "object.h"
+#include "url.h"
+#include "headers.h"
+#include "serializer.h"
 
-namespace mhttp {
+namespace jtp {
   struct  MRequest : private MSerializable {
       MRequest()
         : _method(UNKNOWN),
@@ -37,6 +37,6 @@ namespace mhttp {
 
       virtual void serialize(const json &data) override;
   };
-}
+} // namespace jtp
 
 #endif

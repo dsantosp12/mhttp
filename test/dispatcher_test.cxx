@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include "mdispatcher.h"
+#include "dispatcher.h"
 #include "../src/json/json.hpp"
 
-using namespace mhttp;
+using namespace jtp;
 
 TEST(MDispatcher_Test, DispatchRequest)
 {

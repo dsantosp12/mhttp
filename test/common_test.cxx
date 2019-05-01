@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "mcommon.h"
+#include "common.h"
 
-using namespace mhttp;
+using namespace jtp;
 
 TEST(MCommon_Test, methodToString) {
     EXPECT_EQ(MmethodToStr(GET), "GET");

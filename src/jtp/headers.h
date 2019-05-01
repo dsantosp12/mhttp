@@ -1,14 +1,14 @@
-#ifndef MHTTP_MHEADERS_H
-#define MHTTP_MHEADERS_H
+#ifndef JTP_MHEADERS_H
+#define JTP_MHEADERS_H
 
 #include <map>
 #include <string>
 #include <optional>
 #include <boost/noncopyable.hpp>
 
-#include "mobject.h"
+#include "object.h"
 
-namespace mhttp {
+namespace jtp {
   class MHeaders {
     using HeaderMap = std::map<std::string, std::string>;
     public:
@@ -39,6 +39,6 @@ namespace mhttp {
     private:
       HeaderMap _headers;
   };
-}
+} // namespace jtp
 
 #endif

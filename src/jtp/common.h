@@ -1,5 +1,5 @@
-#ifndef MHTTP_MCOMMON_H
-#define MHTTP_MCOMMON_H
+#ifndef JTP_MCOMMON_H
+#define JTP_MCOMMON_H
 
 #include <string>
 #include <functional>
@@ -8,7 +8,7 @@
 #include <boost/asio.hpp>
 #include <boost/system/error_code.hpp>
 
-namespace mhttp {
+namespace jtp {
   using MCallback = std::function<void(const std::string&)>;
   using MError = boost::system::error_code;
   using MBuffers = std::vector<boost::asio::const_buffer>;
@@ -35,6 +35,6 @@ namespace mhttp {
   std::string MmethodToStr(MMethod m);
 
   MMethod MstrToMethod(const std::string& s);
-}
+} // namespace jtp
 
 #endif

@@ -1,8 +1,8 @@
 #include <iostream>
-#include "mhttp.h"
+#include "jtp.h"
 
 int main() {
-  mhttp::MServer s;
+  jtp::MServer s;
   s.run();
   return 0;
 }

@@ -1,6 +1,6 @@
-#include "mconnectionmanager.h"
+#include "connectionmanager.h"
 
-namespace mhttp {
+namespace jtp {
   void MConnectionManager::start(MConnectionPtr conn) {
     _connections.insert(conn);
     conn->start();
@@ -16,4 +16,4 @@ namespace mhttp {
     [this](auto conn) { this->stop(conn); });
     _connections.clear();
   }
-} // mhttp
+} // namespace jtp

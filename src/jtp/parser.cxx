@@ -4,9 +4,9 @@
 #include <utility>
 #include <iostream>
 
-#include "mparser.h"
+#include "parser.h"
 
-namespace mhttp {
+namespace jtp {
   const std::string HTTP_VERSION_1_0 = "HTTP/1.0";
   const std::string HTTP_VERSION_1_1 = "HTTP/1.1";
 
@@ -27,4 +27,4 @@ namespace mhttp {
     _buffer = json::parse(buff);
     outRequest->serialize(_buffer);
   }
-} // mhttp
+} // namespace jtp

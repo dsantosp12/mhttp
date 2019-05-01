@@ -1,7 +1,7 @@
-#include "mdispatcher.h"
-#include "mparser.h"
+#include "dispatcher.h"
+#include "parser.h"
 
-namespace mhttp {
+namespace jtp {
   MDispatcher::MDispatcher() { }
 
   MResponse MDispatcher::dispatch(MBuffer& buff) {
@@ -15,4 +15,4 @@ namespace mhttp {
 
     return resp;
   }
-} // mhttp
+} // namespace jtp

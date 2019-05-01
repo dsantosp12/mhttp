@@ -1,6 +1,6 @@
-#include "mheaders.h"
+#include "headers.h"
 
-namespace mhttp {
+namespace jtp {
   void MHeaders::set(const std::string& key, const std::string& val) {
     _headers.insert(std::make_pair(key, val));
   }
@@ -15,4 +15,4 @@ namespace mhttp {
     }
 
   }
-} // mhttp
+} // namespace jtp
